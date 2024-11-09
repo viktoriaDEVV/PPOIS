@@ -23,7 +23,6 @@
         return name;
     }
 
-    // Геттер для зарплаты
     double Worker::getSalary() const {
         return salary;
     }

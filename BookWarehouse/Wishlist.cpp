@@ -4,7 +4,6 @@ void Wishlist::addToWishlist(const string& title) {
         bookTitles.insert(title);
     }
 
-    // Метод для отображения списка желаемого
     void Wishlist::displayWishlist() const {
         cout << "Wishlist:\n";
         for (const auto& title : bookTitles) {

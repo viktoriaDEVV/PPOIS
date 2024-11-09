@@ -44,7 +44,7 @@ SysAdmin::SysAdmin(const string& fName, const string& sName, const string& userL
     }
 
     void SysAdmin::resetPassword(const string& username) {
-        string newPassword = "defaultPassword"; // Логика генерации нового пароля
+        string newPassword = "defaultPassword"; 
         cout << "Password for " << username << " reset to " << newPassword << ".\n";
         logAction("Reset password for " + username);
     }

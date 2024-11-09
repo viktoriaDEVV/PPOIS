@@ -49,8 +49,7 @@ TEST(ReaderTests, ReturnBookNotInList) {
     Reader reader;
     reader.borrowBook("The Great Gatsby");
 
-    // Пытаемся вернуть книгу, которой нет в списке
     reader.returnBook("1984");
-    EXPECT_EQ(reader.borrowedBooks.size(), 1);  // Размер не изменится
+    EXPECT_EQ(reader.borrowedBooks.size(), 1);
     EXPECT_EQ(reader.borrowedBooks[0], "The Great Gatsby");
 }

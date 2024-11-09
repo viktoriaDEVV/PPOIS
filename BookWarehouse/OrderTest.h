@@ -51,7 +51,7 @@ TEST(OrderTests, PrintOrderDetailsOutputsCorrectInfo) {
 
     order.printOrderDetails();
 
-    std::cout.rdbuf(originalCoutBuffer); // Возвращаем оригинальный буфер
+    std::cout.rdbuf(originalCoutBuffer);
 
     std::string expectedOutput = 
         "Order Number: Order001\n"

@@ -13,8 +13,7 @@ Reader Order::getReader() const {
     const vector<Book>& Order::getOrderedBooks() const {
         return orderedBooks;
     }
-
-    // Сеттеры
+    
     void Order::setOrderStatus(const string& status) {
         orderStatus = status;
     }

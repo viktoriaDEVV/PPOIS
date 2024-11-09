@@ -8,12 +8,9 @@ TEST(DateTest, DisplayOutputsCorrectFormat) {
     std::ostringstream buffer;
     std::streambuf* originalCoutBuffer = std::cout.rdbuf(buffer.rdbuf());
     
-    // Вызов метода Display
     date->Display();
     
-    // Возвращаем оригинальный буфер
     std::cout.rdbuf(originalCoutBuffer);
 
-    // Проверяем вывод
     EXPECT_EQ(buffer.str(), "10/11/2023");
 }

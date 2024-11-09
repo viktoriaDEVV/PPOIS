@@ -20,9 +20,8 @@ TEST(ShelfTests, AddBooksToShelfExceedsCapacity) {
     shelf.addBooksToShelf(10);
     EXPECT_EQ(shelf.getSection().getAmountBook(), 10);
 
-    // Пытаемся добавить больше, чем ёмкость
     shelf.addBooksToShelf(5);
-    EXPECT_EQ(shelf.getSection().getAmountBook(), 10);  // Количество не изменится
+    EXPECT_EQ(shelf.getSection().getAmountBook(), 10);
 }
 
 TEST(ShelfTests, GetShelfNumberReturnsCorrectNumber) {
