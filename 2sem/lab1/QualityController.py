@@ -17,7 +17,6 @@ class QualityController:
     def add_product(self, product: Product) -> None:
         self.products.append(product)
 
-    @property
     def show_products(self) -> list[tuple[str, str]]:
         return [(product.product_id, product.product_name) for product in self.products]
 
@@ -34,7 +33,8 @@ class QualityController:
                 failed_criteria.append(criterion)
         if failed_criteria:
             print(
-                f"Продукт {product_id} не прошел проверку качества по следующим критериям: {', '.join(failed_criteria)}.")
+                f"Продукт {product_id} не прошел проверку качества\
+                 по следующим критериям: {', '.join(failed_criteria)}.")
         else:
             product.inspection_status = 'Passed'
             print(product.inspection_status)

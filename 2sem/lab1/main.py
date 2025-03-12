@@ -34,13 +34,12 @@ def main():
         if choice == '1':
             product_name = input("Введите название продукта: ")
             product = Product(product_name)
-            # product = Product("Coffee")
             controller.add_product(product)
             print(f"Продукт c ID {product.product_id} добавлен.")
             print(product.__str__())
 
         elif choice == '2':
-            list_of_products = controller.show_products
+            list_of_products = controller.show_products()
             print("\nСписок продуктов:")
             if not list_of_products:
                 print("Список продуктов пуст.")
@@ -95,12 +94,12 @@ def main():
             product_id = input("Введите ID продукта для добавления отзыва: ")
             while True:
                 try:
-                    author = input("Введите имя автора: ").strip()  # Удаляем пробелы по краям
-                    if not author:  # Проверка на пустую строку
+                    author = input("Введите имя автора: ")
+                    if not author:
                         raise ValueError("Имя автора не должно быть пустым.")
-                    break  # Выход из цикла, если ввод корректен
+                    break
                 except ValueError as e:
-                    print(e)  # Вывод сообщения об ошибке
+                    print(e)
             comment = input("Введите комментарий: ")
             while True:
                 try:
